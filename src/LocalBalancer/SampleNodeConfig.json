@@ -1,0 +1,41 @@
+{
+  "NodeConfiguration": {
+    "CircuitBreakThreadhold": 2,
+    "RetryCount": 3,
+    "Nodes": {
+      "PublicNet": {
+        "Headers": {
+          "X-API-KEY": "89afeb3cd79240cbb88ba899243d4d3d"
+        },
+        "IsActive": true,
+        "NetworkAddress": "http://scooterlabs.com/echo",
+        "Priority": 1,
+        "LastKnownStatus": 0
+      },
+      "PublicNetBackup": {
+        "Headers": {},
+        "IsActive": true,
+        "NetworkAddress": "https://dead/",
+        "Priority": 2,
+        "LastKnownStatus": 0
+      },
+      "PrivateMain": {
+        "Headers": {
+          "X-API-KEY": "2eb492434230407d832d2c2adfe8febd",
+          "X-AUTH-KEY": "26a35758b38448ccb821f77ed2cd7ded"
+        },
+        "IsActive": true,
+        "NetworkAddress": "http://scooterlabs.com/echo",
+        "Priority": 3,
+        "LastKnownStatus": 0
+      },
+      "PrivateBackup": {
+        "Headers": {},
+        "IsActive": true,
+        "NetworkAddress": "https://dead-too/",
+        "Priority": 4,
+        "LastKnownStatus": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{1715369D-8637-421D-AA53-59F25FF94BE9}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		azure-pipelines.yml = azure-pipelines.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{54090883-6446-4408-94F5-27B7261C4631}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ED338598-F90C-4F4F-AD9B-4DAC383C9D54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{52B2DD4A-1018-4472-B9BC-33CD1D8F656D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{40FE6EA6-5590-4AE9-A63A-BE4CCAFDD414}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalBalancer.Tests", "src\LocalBalancer.Tests\LocalBalancer.Tests.csproj", "{87201561-4D3F-41B7-9364-AC0571E66836}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalBalancer", "src\LocalBalancer\LocalBalancer.csproj", "{C8ED8529-F618-4BC0-9A5B-6853D816C6FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalBalancer.Http", "src\LocalBalancer.Http\LocalBalancer.Http.csproj", "{01365F5B-92EE-4882-9F48-D389EE8F81ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87201561-4D3F-41B7-9364-AC0571E66836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87201561-4D3F-41B7-9364-AC0571E66836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87201561-4D3F-41B7-9364-AC0571E66836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87201561-4D3F-41B7-9364-AC0571E66836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8ED8529-F618-4BC0-9A5B-6853D816C6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8ED8529-F618-4BC0-9A5B-6853D816C6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8ED8529-F618-4BC0-9A5B-6853D816C6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8ED8529-F618-4BC0-9A5B-6853D816C6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01365F5B-92EE-4882-9F48-D389EE8F81ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01365F5B-92EE-4882-9F48-D389EE8F81ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01365F5B-92EE-4882-9F48-D389EE8F81ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01365F5B-92EE-4882-9F48-D389EE8F81ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87201561-4D3F-41B7-9364-AC0571E66836} = {52B2DD4A-1018-4472-B9BC-33CD1D8F656D}
+		{C8ED8529-F618-4BC0-9A5B-6853D816C6FC} = {ED338598-F90C-4F4F-AD9B-4DAC383C9D54}
+		{01365F5B-92EE-4882-9F48-D389EE8F81ED} = {54090883-6446-4408-94F5-27B7261C4631}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3092F313-C4F8-49FB-8173-33A4A6DB2FF1}
+	EndGlobalSection
+EndGlobal

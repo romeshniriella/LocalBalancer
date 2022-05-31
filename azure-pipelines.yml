@@ -1,0 +1,48 @@
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables: 
+  BuildConfiguration: 'Release'
+  PackageBuildNumber:  $(Build.BuildNumber)
+
+steps:
+
+- task: NuGetCommand@2
+  displayName: Restore
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'config'
+ 
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--configuration $(BuildConfiguration) --no-cache'
+
+- task: DotNetCoreCLI@2
+  displayName: Run Tests
+  inputs:
+    command: test
+    projects: '**/LocalBalancer.Tests.csproj'
+    arguments: '--configuration $(BuildConfiguration)'
+    
+- task: DotNetCoreCLI@2
+  displayName: Pack Nugets
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/*.csproj;!**\*.Tests.csproj'
+    includesymbols: true
+    includesource: true
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'PackageBuildNumber'
+    
+- task: NuGetCommand@2
+  displayName: Publish Nugets
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '882ebb48-1ccc-4ca8-8ccf-4db3584146fe'
