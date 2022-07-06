@@ -1,7 +1,8 @@
 ﻿# Local Balancer
 ### Excample code from (Implementing resiliency at the edge)[https://romeshniriella.medium.com/implementing-resiliency-at-the-edge-a575561c0abe]
 
-Covered with lots of tests.
+# Usage
+(.NET Core)[https://github.com/romeshniriella/LocalBalancer/blob/main/src/LocalBalancer/README.md]
 
 # Contribution
 Pull Requests for improvements are most welcome!
