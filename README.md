@@ -1,11 +1,14 @@
-﻿# Local Balancer
-### Excample code from (Implementing resiliency at the edge)[https://romeshniriella.medium.com/implementing-resiliency-at-the-edge-a575561c0abe]
+# Local Balancer
+
+Example Code from [Implementing resiliency at the edge](https://romeshniriella.medium.com/implementing-resiliency-at-the-edge-a575561c0abe)
+
 
 # Usage
-(.NET Core)[https://github.com/romeshniriella/LocalBalancer/blob/main/src/LocalBalancer/README.md]
+[.NET Core example](https://github.com/romeshniriella/LocalBalancer/blob/main/src/LocalBalancer/README.md)
 
 # Contribution
 Pull Requests for improvements are most welcome!
 
+If you port it, send me the link! [@RomyZero](https://twitter.com/RNiriella)
 
-> Just follow the microsoft .net standards as and good SOLID practices as much as possible.
+> If you wish to create a pull request, Please follow microsoft .net standards and good SOLID engineering practices. Thank you.
